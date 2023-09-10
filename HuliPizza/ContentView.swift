@@ -10,10 +10,10 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            HeaderView()
+            MenuListView()
+            OrderListView()
+            Spacer()
         }
         .padding()
     }
@@ -21,6 +21,13 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group{
+            ContentView()
+            ContentView()
+                .colorScheme(.dark)
+                .background(Color.black)
+                .previewDevice("iPad mini (6th generation)")
+            
+        }
     }
 }
